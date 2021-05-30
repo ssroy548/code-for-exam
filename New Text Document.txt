@@ -1,0 +1,210 @@
+ct 1
+set-a-2
+#include <stdio.h>
+
+int main()
+{
+	int i, a, b, c;
+	char ignoreD;
+	while(scanf(" %d %c %d %c %d", &a, &ignoreD, &b, &ignoreD, &c)!=EOF)
+	{
+		for(i=15; i<=31; i++)
+		{
+			if(i==a){
+				printf("%d\n", a);
+				break;
+			}
+			else if(i==b){
+				printf("%d\n", b);
+				break;
+			}
+			else if(i==c){
+				printf("%d\n", c);
+				break;
+			}
+			else continue;
+		}
+	}
+	return 0;
+}
+set-a-3
+#include <stdio.h>
+void main()
+{
+	if(printf("Hello There!\n")){
+	#include <string.h>
+	}
+}
+set-a-3
+#include <stdio.h>
+void main()
+{
+	if(printf("Hello There!\n")){
+	#include <string.h>
+	}
+}
+set-a-4
+#include <stdio.h>
+
+int main()
+{
+	int firstnum, numbers, counter=0;
+	scanf("%d",&numbers);
+	if(numbers>19)
+	{
+		printf("Invalid Number\n");
+		return 0;
+	}
+	firstnum=numbers;
+	while(scanf("%d",&numbers)!=EOF)
+	{
+		if(numbers<10) break;
+		if(numbers-firstnum>5) counter++;
+	}
+	printf("%d\n", counter);
+	return 0;
+}
+set-b-1
+#include <stdio.h>
+
+int main()
+{
+	printf("Infinite\n");
+	main();
+	return 0;
+}
+set-b-2
+#include <stdio.h>
+
+int main()
+{
+	int n1, n2, res, pluS, minuS, diV, muL, moD;
+	char ignoreD;
+	while(scanf(" %d %c %d %c %d", &n1, &ignoreD, &n2, &ignoreD, &res)!=EOF)
+	{
+		pluS=n1+n2;
+		minuS=n1-n2;
+		muL=n1*n2;
+		diV=n1/n2;
+		moD=n1%n2;
+		if(res==pluS)
+			printf("%d + %d = %d\n", n1, n2, res );
+		else if(res==minuS)
+			printf("%d - %d = %d\n", n1, n2, res );
+		else if(res==muL)
+			printf("%d * %d = %d\n", n1, n2, res );
+		else if(res==diV)
+			printf("%d / %d = %d\n", n1, n2, res );
+		else if(res==moD)
+			printf("%d %% %d = %d\n", n1, n2, res );
+		else continue;
+		
+	}
+	return 0;
+}
+set-b-3
+#include <stdio.h>
+
+int main()
+{
+	if(printf("hello"))
+		printf("world");
+	else
+		printf("hello");
+	return 0;
+}
+set-b-4
+#include <stdio.h>
+
+int main()
+{
+    int n,op=1,result=0,N,f=1;
+    scanf("%d",&n);
+    while(n--)
+    {
+        scanf("%d",&N);
+
+        if(!f)
+        {
+            switch(op)
+            {
+            case 1:
+                result += N;
+                break;
+            case 2:
+                result -= N;
+                break;
+            case 3:
+                result *= N;
+                break;
+            case 4:
+                result /= N;
+                break;
+            default:
+                continue;
+            }
+            op++;
+            if(op==5) op=1;
+        }
+        else
+        {
+            f=0;
+            result=N;
+        }
+    }
+    printf("%d\n", result);
+    return 0;
+}
+
+
+
+ct 2
+
+/ans CT2 set A problem 2
+
+#include<stdio.h>
+
+int main()
+{
+    int dept,cost,i=1;
+    scanf("%d",&dept);
+    while(scanf("%d",&cost)&&cost>=0)
+    {
+        dept=dept-cost;
+        printf("Day %d: Cost- %d, Remaining Balance- %d\n",i,cost,dept);
+        i++;
+    }
+
+
+    return 0;
+}
+
+//ans CT2 set B qstn 1
+
+#include<stdio.h>
+
+int main()
+{
+    int t,dd,mm,yy,time,i=0,small=1000000000,mmry;
+    scanf("%d",&t);
+    char name[t][20],c;
+    while(i<t)
+    {
+        scanf("%s",name[i]);            //careful just 1st name
+        scanf("%d%c%d%c%d",&dd,&c,&mm,&c,&yy);
+        time=yy*10000+mm*100+dd;
+        if(time<small)
+        {
+            small=time;
+            mmry=i;
+        }
+        i++;
+    }
+    printf("%s\n",name[mmry]);
+
+
+
+
+
+    return 0;
+}
